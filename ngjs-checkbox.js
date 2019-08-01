@@ -1,11 +1,11 @@
 (function() {
   'use strict';
 
-  angular.module('ngjs-checkbox')
-    .directive('ngjs-checkbox', function() {
+  angular.module('paymentEstimator')
+    .directive('peCheckbox', function() {
       return {
-        restrict: 'EA',
-        templateUrl: 'ngjs-checkboxTpl.html',
+        restrict: 'A',
+        templateUrl: 'app/components/peCheckbox/peCheckboxTpl.html',
         transclude: true,
         controller: ['$timeout', function($timeout) {
           var $ctrl = this;
@@ -24,7 +24,6 @@
 
           $ctrl.onKeyUpFunc = function(event) {
             if(!$ctrl.disabled && (event.keyCode === 13 || event.keyCode === 32)) {
-              this.checked = !this.checked;
               $ctrl.onChecked();
             }
           }
@@ -32,7 +31,7 @@
         controllerAs: '$ctrl',
         bindToController: {
           disabled: '=',
-          checked: '=',
+          checkedValue: '=',
           tagLabel: '@',
           allowLabelClicks: '@',
           onChecked: '&',
