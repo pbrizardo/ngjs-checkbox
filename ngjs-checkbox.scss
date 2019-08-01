@@ -1,0 +1,65 @@
+.ngjs-checkbox {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+
+  &:focus { outline: 1px solid $color-blue;}
+
+  // hide input box
+  input {
+    display: none;
+
+    // checked
+    &[checked] + .ngjs-checkbox-checkmark:before {
+      visibility: visible;
+    }
+  }
+
+  &-checkmark {
+    position:absolute;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    top: 0;
+    left: 0;
+
+    &:before {
+      @include fontSize(14px);
+      @extend .glyphicon;
+      @extend .glyphicon-ok;
+      color: #31b445;
+      visibility: hidden;
+      left: 15px;
+      top: 15px;
+    }
+  }
+
+  &-label {
+    display: inline-block;
+    margin: 0 0 0 60px;
+    min-height: 45px;
+  }
+
+  // modifiers
+
+  &-disabled {
+    .pe-checkbox-checkmark { background-color: $gray-light; }
+    .pe-checkbox-label { color: $gray-dark; }
+  }
+
+  &-sm &-checkmark {
+    width: 25px;
+    height: 25px;
+
+    &:before {
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  &-sm &-label {
+    margin-left: 40px;
+    min-height: 25px;
+    padding-top: 5px;
+  }
+}
