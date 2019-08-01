@@ -3,8 +3,8 @@
   onkeydown this event prevents spacebar scrolling
 -->
 <label
-  class="ngjs-checkbox"
-  ng-class="$ctrl.disabled && 'ngjs-checkbox-checkbox-disabled'"
+  class="pe-checkbox"
+  ng-class="$ctrl.disabled && 'pe-checkbox-disabled'"
   ng-keyup="$ctrl.onKeyUpFunc($event)"
   onkeydown="if (event.keyCode === 32) { event.preventDefault(); }"
   tabindex="0"
@@ -12,12 +12,12 @@
   <input
     type="checkbox"
     ng-disabled="$ctrl.disabled"
-    ng-checked="$ctrl.checked"
+    ng-checked="$ctrl.checkedValue"
     ng-click="$ctrl.onChange($event)"
     tag-label="{{$ctrl.tagLabel}}"
   />
-  <span class="ngjs-checkbox-checkbox-checkmark"></span>
-  <span class="ngjs-checkbox-checkbox-label" ng-click="$ctrl.onLabelClicked($event)">
+  <span class="pe-checkbox-checkmark"></span>
+  <span class="pe-checkbox-label" ng-click="$ctrl.onLabelClicked($event)">
     <ng-transclude />
   </span>
 </label>
