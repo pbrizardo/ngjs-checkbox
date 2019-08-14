@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('myApp')
+  angular.module('ngjsCheckbox', [])
     .directive('ngjsCheckbox', function() {
       return {
         restrict: 'A',
