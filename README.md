@@ -3,6 +3,7 @@ Checkbox for angularjs versions
 
 Usage:
 
+```
 <div ngjs-checkbox
   checked-value="$ctrl.isChecked"
   on-checked="vm.onChecked()"
@@ -11,3 +12,4 @@ Usage:
 >
   <span>{{:: $ctrl.checkboxLabel}}</span>
 </div>
+```
