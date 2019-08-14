@@ -1,11 +1,11 @@
 (function() {
   'use strict';
 
-  angular.module('paymentEstimator')
-    .directive('peCheckbox', function() {
+  angular.module('myApp')
+    .directive('ngjsCheckbox', function() {
       return {
         restrict: 'A',
-        templateUrl: 'app/components/peCheckbox/peCheckboxTpl.html',
+        templateUrl: './ngjsCheckboxTpl.html',
         transclude: true,
         controller: ['$timeout', function($timeout) {
           var $ctrl = this;
