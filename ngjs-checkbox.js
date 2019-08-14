@@ -40,7 +40,7 @@
         link: function(scope, element, attr) {
           var size = attr.size;
 
-          if (size) { element.addClass('pe-checkbox-'+size); }
+          if (size) { element.addClass('ngjs-checkbox-'+size); }
         }
       }
     });
