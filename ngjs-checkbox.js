@@ -23,14 +23,14 @@
           }
 
           $ctrl.onKeyUpFunc = function(event) {
-            if(!$ctrl.disabled && (event.keyCode === 13 || event.keyCode === 32)) {
+            if(!$ctrl.isDisabled && (event.keyCode === 13 || event.keyCode === 32)) {
               $ctrl.onChecked();
             }
           }
         }],
         controllerAs: '$ctrl',
         bindToController: {
-          disabled: '=',
+          isDisabled: '=',
           checkedValue: '=',
           tagLabel: '@',
           allowLabelClicks: '@',
