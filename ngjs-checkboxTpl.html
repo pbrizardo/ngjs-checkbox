@@ -4,14 +4,14 @@
 -->
 <label
   class="pe-checkbox"
-  ng-class="$ctrl.disabled && 'pe-checkbox-disabled'"
+  ng-class="$ctrl.isDisabled && 'pe-checkbox-disabled'"
   ng-keyup="$ctrl.onKeyUpFunc($event)"
   onkeydown="if (event.keyCode === 32) { event.preventDefault(); }"
   tabindex="0"
 >
   <input
     type="checkbox"
-    ng-disabled="$ctrl.disabled"
+    ng-disabled="$ctrl.isDisabled"
     ng-checked="$ctrl.checkedValue"
     ng-click="$ctrl.onChange($event)"
     tag-label="{{$ctrl.tagLabel}}"
